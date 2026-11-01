@@ -1,9 +1,9 @@
 class Wchat < Formula
   desc "Terminal AI assistant (Python, bundled venv)"
   homepage "https://github.com/Manjioko/shell-scripts"
-  url "https://github.com/Manjioko/shell-scripts/releases/download/v0.3.2/wchat-0.3.2.tar.gz"
-  sha256 "5e1e5fe6bb5d47ecfd34151dbe988c025937986ac3192158b1e7870006a2e5a2"
-  version "0.3.2"
+  url "https://github.com/Manjioko/shell-scripts/releases/download/v0.3.3/wchat-0.3.3.tar.gz"
+  sha256 "9c143de62aef92de5841abd6cdafeceffd5e92a000c49884050955b9a618525f"
+  version "0.3.3"
   license "MIT"
 
   depends_on "python@3.12"
@@ -12,6 +12,7 @@ class Wchat < Formula
     libexec.install "wchat", "wchat_py", "requirements.txt"
     (libexec/"configs").install "configs/config.example"
     (libexec/"configs").install "configs/ctmodel.py"
+    (libexec/"configs").install "configs/mcporter.example.json"
     (libexec/"doc").install "README.md" if File.exist?("README.md")
     (libexec/"doc").install Dir["docs/*.md"] if Dir.exist?("docs")
 
